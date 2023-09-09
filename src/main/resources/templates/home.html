@@ -2,24 +2,256 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Home GTC</title>
+    <title>Create Account GTC</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
     <link rel="stylesheet" href="../static/styles/style.css" type="text/css">
     <link rel="stylesheet" th:href="@{/styles/style.css}" type="text/css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-wJ7LKWJ4xD6+vFFWg/hKJx97a4t1lrhC/yBYxzyzv3jkvc8SV0SC01pejz2epGja5XtpG5Q+F2q1bhL1+eYpzQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
-<body>
+<body class="d-flex flex-column" style="min-height: 100vh;">
 <header class="w-100 h-25 d-flex justify-content-center align-items-center border-bottom bg-dark">
-    <h1 class="text-light">User Creation</h1>
-    <p class="ms-4 mt-3 img-title"><?xml version="1.0" ?><svg height="48" viewBox="0 0 48 48" width="48" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h48v48h-48z" fill="none"/><path d="M33 24c2.76 0 4.98-2.24 4.98-5s-2.22-5-4.98-5c-2.76 0-5 2.24-5 5s2.24 5 5 5zm-15-2c3.31 0 5.98-2.69 5.98-6s-2.67-6-5.98-6c-3.31 0-6 2.69-6 6s2.69 6 6 6zm15 6c-3.67 0-11 1.84-11 5.5v4.5h22v-4.5c0-3.66-7.33-5.5-11-5.5zm-15-2c-4.67 0-14 2.34-14 7v5h14v-4.5c0-1.7.67-4.67 4.74-6.94-1.74-.37-3.43-.56-4.74-.56z"/></svg></p>
+    <div class="container">
+        <nav class="navbar navbar-expand-lg bg-dark border-bottom border-body" data-bs-theme="dark">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="/home">GTC</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="/home">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/login">Login</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="/createAccount" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Create Account
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="/login">Login</a></li>
+                                <li><a class="dropdown-item" href="/createAccount">Create Account</a></li>
+                                <li><hr class="dropdown-divider"></li>
+                                <li><a class="dropdown-item" href="#">Something else here</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link disabled" aria-disabled="true">About</a>
+                        </li>
+                    </ul>
+                    <form class="d-flex" role="search">
+                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                        <button class="btn btn-outline-success" type="submit">Search</button>
+                    </form>
+                </div>
+            </div>
+        </nav>
+    </div>
 </header>
 
-<main class="w-100 h-100 container mt-3 mb-3 border rounded-3 pt-2">
-    <a href="/login" class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover link-opacity-75-hover">Go Back</a>
-    <h2 class="text-center">Enter Information</h2>
-
+<main class="flex-grow-1 w-100 h-100 container mt-3 mb-3 border rounded-3 pt-2">
+    <div class="row">
+        <div class="col-xs-12 col-md-4">
+            <h5 class="text-center mb-3 mt-2">CATEGORIES</h5>
+            <div class="accordion" id="accordionExample">
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                            Computers
+                        </button>
+                    </h2>
+                    <div id="collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            <a href="">Dell</a>
+                        </div>
+                        <div class="accordion-body">
+                            <a href="">Acer</a>
+                        </div>
+                        <div class="accordion-body">
+                            <a href="">Hp</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                            Laptops
+                        </button>
+                    </h2>
+                    <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            <a href="">Mac</a>
+                        </div>
+                        <div class="accordion-body">
+                            <a href="">Lenovo</a>
+                        </div>
+                        <div class="accordion-body">
+                            <a href="">Hp</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                            Phones
+                        </button>
+                    </h2>
+                    <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            <a href="">Iphone</a>
+                        </div>
+                        <div class="accordion-body">
+                            <a href="">Samsung</a>
+                        </div>
+                        <div class="accordion-body">
+                            <a href="">Xiaomi</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                            Tables
+                        </button>
+                    </h2>
+                    <div id="collapseFour" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            <a href="">Samsung</a>
+                        </div>
+                        <div class="accordion-body">
+                            <a href="">Iphone</a>
+                        </div>
+                        <div class="accordion-body">
+                            <a href="">Lenovo</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                            Drones
+                        </button>
+                    </h2>
+                    <div id="collapseFive" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            <a href="">Samsung</a>
+                        </div>
+                        <div class="accordion-body">
+                            <a href="">Iphone</a>
+                        </div>
+                        <div class="accordion-body">
+                            <a href="">Lenovo</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col mt-5 pt-3">
+                    <div class="card border-warning mb-3" style="max-width: 18rem;">
+                        <div class="card-header">Shopping terms</div>
+                        <div class="card-body">
+                            <h5 class="card-title">Keep in mind</h5>
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-xs-12 col-md-8">
+            <div id="carouselExampleIndicators" class="carousel slide">
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                </div>
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="https://portatiles.solutekpartes.com/wp-content/uploads/2014/04/venta-computadores-portatiles-popayan.jpg" class="img-fluid w-100 h-100">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="https://www.blackboxmastering.com/en/wp-content/uploads/sites/2/2021/03/4-940x460.jpg" class="d-block w-100" alt="...">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="https://www.blackboxmastering.com/wp-content/uploads/2018/03/288394_107736399325859_4608857_o-copia-940x460.jpg" class="d-block w-100" alt="...">
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+            <div class="row mt-3">
+                <div class="col-4">
+                    <div class="card">
+                        <img src="https://i.dell.com/is/image/DellContent/content/dam/ss2/product-images/page/category/laptop/category-page-mod-xps-13-9320-sl-right-800x620.png?fmt=png-alpha&wid=800&hei=620" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Laptop</h5>
+                            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab adipisci atque commodi fuga laboriosam molestiae nostrum omnis optio repudiandae, saepe sapiente soluta.</p>
+                        </div>
+                        <div class="card-body">
+                            <a href="#" class="btn btn-primary">Buy</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-4">
+                    <div class="card">
+                        <img src="https://consumer.huawei.com/content/dam/huawei-cbg-site/latam/latin/mkt/plp/phones/new/kv/kv-p60-pro.jpg" class="card-img-top mb-3 mt-3" alt="...">
+                        <div class="card-body mt-4">
+                            <h5 class="card-title">Phones</h5>
+                            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci asperiores atque, fugiat ipsa iure laudantium minus nesciunt perferendis quisquam tempore. saepe sapiente soluta.</p>
+                        </div>
+                        <div class="card-body">
+                            <a href="#" class="btn btn-primary">Buy</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-4">
+                    <div class="card">
+                        <img src="https://www.lenovo.com/medias/?context=bWFzdGVyfHJvb3R8MzA5NTM0fGltYWdlL3BuZ3xoNTQvaDhkLzE1NDc1NTcxOTQ5NTk4LnBuZ3w2ZmUyYzE4OWM1NjYwMTA2NDBmNmU0YjY0MGUzZGMyNTBjMjNhYjhkZDBiNzE3NDRhOTUxMzliZWM2ODNmNzAz" class="card-img-top" alt="...">
+                        <div class="card-body mt-3">
+                            <h5 class="card-title">Tables</h5>
+                            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus ad, deserunt exercitationem hic in iusto libero molestiae nihil odit deserunt exercitationem hic.</p>
+                        </div>
+                        <div class="card-body">
+                            <a href="#" class="btn btn-primary">Buy</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </main>
 
-<footer class="w-100 ">Footer</footer>
+<footer class="mt-auto w-100 d-flex justify-content-center align-items-center border-top bg-dark text-light">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 col-md-6 text-center text-md-left">
+                <!-- Botones de redes sociales -->
+                <a href="https://github.com/tu_usuario" target="_blank" class="btn btn-link">
+                    <?xml version="1.0" ?><svg height="30" style="enable-background:new 0 0 512 512;" version="1.1" viewBox="0 0 512 512" width="30" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g id="_x37_1-github"><g><g><g><path d="M255.969,21.733c-131.739,0-238.572,107.541-238.572,240.206      c0,106.107,68.362,196.121,163.205,227.91c11.929,2.22,16.285-5.196,16.285-11.567c0-5.713-0.205-20.817-0.33-40.856      c-66.36,14.507-80.375-32.208-80.375-32.208c-10.828-27.756-26.489-35.139-26.489-35.139      c-21.684-14.893,1.613-14.591,1.613-14.591c23.948,1.701,36.534,24.759,36.534,24.759      c21.295,36.694,55.866,26.105,69.465,19.947c2.146-15.521,8.318-26.105,15.154-32.116      c-52.974-6.073-108.69-26.681-108.69-118.699c0-26.229,9.31-47.668,24.576-64.478c-2.475-6.071-10.646-30.507,2.329-63.554      c0,0,20.045-6.455,65.613,24.614c19.031-5.325,39.432-7.982,59.742-8.072c20.25,0.123,40.676,2.747,59.738,8.105      c45.547-31.074,65.559-24.614,65.559-24.614c13.002,33.077,4.832,57.482,2.387,63.549c15.297,16.81,24.516,38.25,24.516,64.482      c0,92.258-55.773,112.563-108.92,118.512c8.559,7.422,16.191,22.069,16.191,44.471c0,32.124-0.297,58.019-0.297,65.888      c0,6.427,4.293,13.903,16.402,11.54c94.697-31.824,162.998-121.805,162.998-227.883      C494.604,129.273,387.771,21.733,255.969,21.733L255.969,21.733z M255.969,21.733" style="fill:#6879D9;"/></g></g></g></g><g id="Layer_1"/></svg>
+                </a>
+                <a href="https://www.linkedin.com/in/tu_perfil" target="_blank" class="btn btn-link text-light">
+                    <?xml version="1.0" ?><svg enable-background="new 0 0 32 32" height="30" id="Layer_1" version="1.0" viewBox="0 0 32 32" width="30" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g><path d="M32,30c0,1.104-0.896,2-2,2H2c-1.104,0-2-0.896-2-2V2c0-1.104,0.896-2,2-2h28c1.104,0,2,0.896,2,2V30z" fill="#007BB5"/><g><rect fill="#FFFFFF" height="14" width="4" x="7" y="11"/><path d="M20.499,11c-2.791,0-3.271,1.018-3.499,2v-2h-4v14h4v-8c0-1.297,0.703-2,2-2c1.266,0,2,0.688,2,2v8h4v-7    C25,14,24.479,11,20.499,11z" fill="#FFFFFF"/><circle cx="9" cy="8" fill="#FFFFFF" r="2"/></g></g><g/><g/><g/><g/><g/><g/></svg>
+                </a>
+                <a href="https://www.facebook.com/tu_pagina" target="_blank" class="btn btn-link text-light">
+                    <?xml version="1.0" ?><svg height="30" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;" version="1.1" viewBox="0 0 512 512" width="30" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:serif="http://www.serif.com/" xmlns:xlink="http://www.w3.org/1999/xlink"><g><path d="M512,256c0,-141.385 -114.615,-256 -256,-256c-141.385,0 -256,114.615 -256,256c0,127.777 93.616,233.685 216,252.89l0,-178.89l-65,0l0,-74l65,0l0,-56.4c0,-64.16 38.219,-99.6 96.695,-99.6c28.009,0 57.305,5 57.305,5l0,63l-32.281,0c-31.801,0 -41.719,19.733 -41.719,39.978l0,48.022l71,0l-11.35,74l-59.65,0l0,178.89c122.385,-19.205 216,-125.113 216,-252.89Z" style="fill:#1877f2;fill-rule:nonzero;"/><path d="M355.65,330l11.35,-74l-71,0l0,-48.022c0,-20.245 9.917,-39.978 41.719,-39.978l32.281,0l0,-63c0,0 -29.297,-5 -57.305,-5c-58.476,0 -96.695,35.44 -96.695,99.6l0,56.4l-65,0l0,74l65,0l0,178.89c13.033,2.045 26.392,3.11 40,3.11c13.608,0 26.966,-1.065 40,-3.11l0,-178.89l59.65,0Z" style="fill:#fff;fill-rule:nonzero;"/></g></svg>                </a>
+                <a href="https://www.instagram.com/tu_perfil" target="_blank" class="btn btn-link text-light">
+                    <?xml version="1.0" ?><svg height="30" style="enable-background:new 0 0 512 512;" version="1.1" viewBox="0 0 512 512" width="30" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g id="_x36_2-instagram"><g><linearGradient gradientUnits="userSpaceOnUse" id="SVGID_1_" x1="65.9038" x2="446.3573" y1="444.4766" y2="64.0231"><stop offset="0" style="stop-color:#FFC107"/><stop offset="0.2211" style="stop-color:#F98D1C"/><stop offset="0.5137" style="stop-color:#F1423B"/><stop offset="0.8329" style="stop-color:#B93088"/><stop offset="0.9944" style="stop-color:#9C27B0"/></linearGradient><path d="M343.193,22H168.32C87.854,22,23,86.863,23,166.958v174.079    C23,421.137,87.854,487,168.32,487h174.873C423.66,487,490,421.137,490,341.037V166.958C490,86.863,423.66,22,343.193,22z     M446,341.037C446,397.025,399.438,443,343.193,443H168.32C112.071,443,66,397.025,66,341.037V166.958    C66,110.973,112.071,65,168.32,65h174.873C399.438,65,446,110.973,446,166.958V341.037z" style="fill:url(#SVGID_1_);"/><linearGradient gradientUnits="userSpaceOnUse" id="SVGID_2_" x1="173.5107" x2="338.0032" y1="336.2451" y2="171.7527"><stop offset="0" style="stop-color:#FFC107"/><stop offset="0.2211" style="stop-color:#F98D1C"/><stop offset="0.5137" style="stop-color:#F1423B"/><stop offset="0.8329" style="stop-color:#B93088"/><stop offset="0.9944" style="stop-color:#9C27B0"/></linearGradient><path d="M255.756,137.947c-64.382,0-116.581,51.961-116.581,116.055    c0,64.085,52.199,116.045,116.581,116.045c64.383,0,116.58-51.96,116.58-116.045C372.336,189.908,320.139,137.947,255.756,137.947    z M255.756,326.531c-40.164,0-72.86-32.551-72.86-72.529c0-40.016,32.696-72.534,72.86-72.534    c40.162,0,72.861,32.519,72.861,72.534C328.617,293.98,295.918,326.531,255.756,326.531z" style="fill:url(#SVGID_2_);"/><linearGradient gradientUnits="userSpaceOnUse" id="SVGID_3_" x1="370.1182" x2="392.037" y1="140.2031" y2="118.2843"><stop offset="0" style="stop-color:#FFC107"/><stop offset="0.2211" style="stop-color:#F98D1C"/><stop offset="0.5137" style="stop-color:#F1423B"/><stop offset="0.8329" style="stop-color:#B93088"/><stop offset="0.9944" style="stop-color:#9C27B0"/></linearGradient><path d="M381.08,113.779c-8.581,0-15.538,6.924-15.538,15.463c0,8.54,6.957,15.467,15.538,15.467    c8.573,0,15.532-6.927,15.532-15.467C396.612,120.703,389.653,113.779,381.08,113.779z" style="fill:url(#SVGID_3_);"/></g></g><g id="Layer_1"/></svg>
+                </a>
+            </div>
+            <div class="col-12 col-md-6 text-center text-md-right">
+                <!-- Marca registrada y año -->
+                <p class="text-center mt-2">&copy; 2023 GTC</p>
+            </div>
+        </div>
+    </div>
+</footer>
+
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
 </body>
