@@ -15,15 +15,15 @@
 <body class="position-absolute d-flex justify-content-center align-items-center w-100 h-100 bg-light">
 <div class="w-50 h-75 d-flex flex-column justify-content-evenly align-items-center">
     <img class="h-25" src="https://th.bing.com/th/id/R.d334e18fc39188f95d0f97e93757fce6?rik=YyGh0I3ai2O7Cw&riu=http%3a%2f%2fcdn.onlinewebfonts.com%2fsvg%2fimg_337531.png&ehk=vOUxpk7WqUPnWI%2ft0dfXzjVhVSJ7AwHxX3v5oPKEsZs%3d&risl=&pid=ImgRaw&r=0" alt="Logo">
-    <form class="w-100 bg-white p-4 rounded shadow-sm text-center">
+    <form class="w-100 bg-white p-4 rounded shadow-sm text-center" th:object="${person}" th:action="@{/login}" method="post">
         <div class="">
             <h1 class="">Login GTC</h1>
         </div>
         <div class="mx-auto mt-4" style="max-width: 80%;">
-            <input class="form-control mb-3" type="text" placeholder="Usuario">
-            <input class="form-control mb-3" type="password" placeholder="Contraseña">
+            <input th:field="*{userName}" id="userName" class="form-control mb-3" type="text" placeholder="Usuario">
+            <input th:field="*{userPassword}" id="userPassword" class="form-control mb-3" type="password" placeholder="Contraseña">
             <div class="d-grid gap-2">
-                <a href="/home" class="btn btn-primary mb-3">Ingresar</a>
+                 <button class="btn btn-primary mb-3" type="submit">Ingresar</button>
             </div>
             <a href="/createAccount" class="text-decoration-none">Crear Cuenta</a>
         </div>
